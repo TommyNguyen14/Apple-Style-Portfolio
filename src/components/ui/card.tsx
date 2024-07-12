@@ -2,6 +2,11 @@ import * as React from 'react'
 
 import { cn } from '@/lib/utils'
 
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  showIcon?: boolean;
+  icon?: string;
+}
+
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
