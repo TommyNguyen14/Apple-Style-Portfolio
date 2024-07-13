@@ -3,8 +3,9 @@ import Card from '../Card.astro';
 import { Icon } from 'astro-icon/components';
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-1" title="Skills">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-1" title="About Me">
   <div class="flex flex-col gap-2">
+    <p class="text-sm font-light text-gray-500">Skills & Tools</p>
     <div class="flex flex-wrap gap-2">
         <Icon name="skill-icons:javascript" class="w-8 h-8" />
         <Icon name="skill-icons:typescript" class="w-8 h-8" />
@@ -21,13 +22,12 @@ import { Icon } from 'astro-icon/components';
         <Icon name="skill-icons:kali-dark" class="w-8 h-8" />
         <Icon name="skill-icons:github-dark" class="w-8 h-8" />
         <Icon name="skill-icons:grafana-dark" class="w-8 h-8" />
-      <!-- Add more cards as needed -->
     </div>
     <p class="text-sm font-light">
-      Various EDR tools and MDM platforms, including NinjaOne, Jamf, Kandji, Augmentt, and JumpCloud.
+      Various EDR tools and MDM platforms, including NinjaOne, Kandji, Augmentt, and JumpCloud.
     </p>
     <p class="text-sm font-light">
-      Beyond this, I enjoy weight lifting, playing games, building keyboards, and listening to music.
+      Beyond this, a few hobbies I have are weight lifting, playing games, building keyboards, and listening to music.
     </p>
   </div>
 </Card>

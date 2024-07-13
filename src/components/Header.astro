@@ -1,6 +1,8 @@
 ---
 import { buttonVariants } from '../components/ui/button'
 import { ModeToggle } from '../components/ui/ThemeToggle'
+import { Icon } from 'astro-icon/components';
+const PDF = '/Nguyen_Resume_2024.pdf'
 ---
 
 <script is:inline>
@@ -38,7 +40,16 @@ import { ModeToggle } from '../components/ui/ThemeToggle'
         >
           GitHub
         </a>
+        <a
+        target="_blank" 
+        href={PDF}
+        rel="noreferrer"
+        class={buttonVariants({ variant: 'ghost' })}
+      >
+        Resume &nbsp;<Icon name="mdi:open-in-new" />
+        </a>
         <ModeToggle transition:persist client:load />
+
       </nav>
     </div>
   </div>

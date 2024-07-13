@@ -3,17 +3,13 @@ import Card from '../Card.astro'
 import { LINKS } from '../../lib/constants'
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-1" title="Contact Me">
   <div class="h-full">
-    <header class="flex items-center">
-      <h1 class="text-xl font-bold text-foreground">
-        Contact Me
-      </h1>
-    </header>
-    <address class="mt-4 flex flex-col">
-      <h2 class="text-gray-500">Contact Details</h2>
-      <p>tommy.nguy14@gmail.com</p>
-      <p>Washington DC-Baltimore Area</p>
-    </address>
+    <p class="text-sm font-light text-gray-500">Contact Details</p>
+    <p class="text-sm font-light">
+      tommy.nguy14@gmail.com </br>
+      <a href={LINKS.linkedin} aria-label="linkeding profile" target="_blank">LinkedIn: TommyNguyen14</a>
+
+      </p>
   </div>
 </Card>
