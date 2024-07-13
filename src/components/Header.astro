@@ -1,7 +1,7 @@
 ---
 import { buttonVariants } from '../components/ui/button'
 import { ModeToggle } from '../components/ui/ThemeToggle'
-import { Icon } from 'astro-icon/components';
+import { Icon } from 'astro-icon/components'
 const PDF = '/Nguyen_Resume_2024.pdf'
 ---
 
@@ -27,7 +27,9 @@ const PDF = '/Nguyen_Resume_2024.pdf'
   >
     <div class="flex gap-6 md:gap-10">
       <a href="/" class="flex items-center space-x-2">
-        <span class="inline-block font-bold text-amber-200">Tommy <span class="hidden sm:inline"">Nguyen</span></span>
+        <span class="inline-block font-bold text-amber-200"
+          >Tommy <span class="hidden sm:inline" ">Nguyen</span></span
+        >
       </a>
     </div>
     <div class="flex flex-1 items-center justify-end space-x-4">
@@ -41,15 +43,14 @@ const PDF = '/Nguyen_Resume_2024.pdf'
           GitHub
         </a>
         <a
-        target="_blank" 
-        href={PDF}
-        rel="noreferrer"
-        class={buttonVariants({ variant: 'ghost' })}
-      >
-        Resume &nbsp;<Icon name="mdi:open-in-new" />
+          target="_blank"
+          href={PDF}
+          rel="noreferrer"
+          class={buttonVariants({ variant: 'ghost' })}
+        >
+          Resume &nbsp;<Icon name="mdi:open-in-new" />
         </a>
         <ModeToggle transition:persist client:load />
-
       </nav>
     </div>
   </div>

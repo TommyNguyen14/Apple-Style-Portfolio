@@ -13,38 +13,40 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Pomotivity",
-    img: "../public/projects/pomotivity.png",
-    repository: "https://github.com/dangphung4/pomodoro-insiohacks2023",
-    description: "Developed a productivity app with a dynamic Pomodoro timer and task management. Added features to increase user engagement and 70+ themes. Integrated Material-UI for a modern interface and ensured cross-browser compatibility and responsiveness through extensive testing."
+    name: 'Pomotivity',
+    img: '../public/projects/pomotivity.png',
+    repository: 'https://github.com/dangphung4/pomodoro-insiohacks2023',
+    description:
+      'Developed a productivity app with a dynamic Pomodoro timer and task management. Added features to increase user engagement and 70+ themes. Integrated Material-UI for a modern interface and ensured cross-browser compatibility and responsiveness through extensive testing.',
   },
   {
-    name: "One Piece Site",
-    img: "../public/projects/onepiecesite.png",
-    repository: "https://github.com/TommyNguyen14/One-Piece-Site",
-    description: "A basic website created using HTML, CSS, and JS. Contains multiple webpages displaying information regarding the Japanese manga series 'One Piece' written by Eiichiro Oda."
+    name: 'One Piece Site',
+    img: '../public/projects/onepiecesite.png',
+    repository: 'https://github.com/TommyNguyen14/One-Piece-Site',
+    description:
+      "A basic website created using HTML, CSS, and JS. Contains multiple webpages displaying information regarding the Japanese manga series 'One Piece' written by Eiichiro Oda.",
   },
   {
-    name: "Wifi Pineapple Pen-Testing",
-    img: "/path/to/project3-image.jpg",
-    repository: "https://github.com/project3",
-    description: "Work in progress project, finding vulnerabilities and wifi scanning."
-  }
+    name: 'Wifi Pineapple Pen-Testing',
+    img: '/path/to/project3-image.jpg',
+    repository: 'https://github.com/project3',
+    description:
+      'Work in progress project, finding vulnerabilities and wifi scanning.',
+  },
 ]
 ---
 
-<BaseLayout
-  title="Portfolio Page"
-  description="Projects & Certifications"
->
+<BaseLayout title="Portfolio Page" description="Projects & Certifications">
   <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
     <TopLayout>
-      <h2 class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+      <h2
+        class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"
+      >
         Projects & Certifications
       </h2>
     </TopLayout>
     <BottomLayout>
-      <div class="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-20">
+      <div class="grid grid-cols-2 gap-20 sm:grid-cols-1 lg:grid-cols-2">
         {
           projects.map((project: Project, index: number) => (
             <ProjectCard
@@ -54,7 +56,7 @@ const projects: Project[] = [
               subheading={project.description}
               imagePath={project.img}
               altText={`${project.name} Image`}
-              class="w-96 h-96"
+              class="h-96 w-96"
             />
           ))
         }

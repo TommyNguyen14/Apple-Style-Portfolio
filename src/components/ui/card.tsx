@@ -3,8 +3,8 @@ import * as React from 'react'
 import { cn } from '@/lib/utils'
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  showIcon?: boolean;
-  icon?: string;
+  showIcon?: boolean
+  icon?: string
 }
 
 const Card = React.forwardRef<
@@ -14,7 +14,7 @@ const Card = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      'rounded-lg border bg-card text-card-foreground shadow-sm transition ease-in-out duration-300 transform hover:border-primary',
+      'transform rounded-lg border bg-card text-card-foreground shadow-sm transition duration-300 ease-in-out hover:border-primary',
       className,
     )}
     {...props}

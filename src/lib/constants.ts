@@ -52,7 +52,6 @@ export const STUDIES = [
     link: 'https://www.gmu.edu/',
     date: '2022 - 2025',
   },
-  
 ]
 
 export const EXPERIENCE = [
@@ -66,7 +65,7 @@ export const EXPERIENCE = [
     tasks: [
       'Reviewed vulnerability assessments and penetration tests on internal networks, applications, and systems to identify security weaknesses.',
       ' Participated in regular team meetings and knowledge-sharing sessions to learn about current cybersecurity threats, trends, and best practices.',
-      ' Attended discussions on networking and penetration testing methodologies, gaining insights from experienced cybersecurity professionals.'
+      ' Attended discussions on networking and penetration testing methodologies, gaining insights from experienced cybersecurity professionals.',
     ],
   },
 ]
