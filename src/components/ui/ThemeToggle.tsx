@@ -12,7 +12,7 @@ export function ModeToggle() {
   }, [])
 
   const toggleTheme = () => {
-    const newTheme = theme === 'dark' ? 'dark' : 'light'
+    const newTheme = theme === 'light' ? 'dark' : 'light'
     setThemeState(newTheme)
     localStorage.setItem('theme', newTheme)
     document.documentElement.classList.toggle('dark', newTheme === 'dark')
