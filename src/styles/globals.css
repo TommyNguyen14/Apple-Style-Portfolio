@@ -10,7 +10,7 @@
     --card-foreground: 20 14.3% 4.1%; /* black */
     --popover: 0 0% 100%; /* white */
     --popover-foreground: 20 14.3% 4.1%; /* black */
-    --primary: 40, 39%, 65%; /* orange */
+    --primary: 51, 69%, 63%; /* orange */
     --primary-foreground: 60 9.1% 97.8%; /* white */
     --secondary: 60 4.8% 95.9%; /* light gray */
     --secondary-foreground: 24 9.8% 10%; /* dark brown */
@@ -22,7 +22,7 @@
     --destructive-foreground: 60 9.1% 97.8%; /* white */
     --border: 20 5.9% 90%; /* light gray */
     --input: 20 5.9% 90%; /* light gray */
-    --ring: 40, 39%, 65%; /* orange */
+    --ring: 51, 69%, 63%; /* orange */
     --radius: 1rem; /* 16px */
     --outline-style: solid; /* default outline style */
   }
@@ -34,7 +34,7 @@
     --card-foreground: 60 9.1% 97.8%; /* white */
     --popover: 20 14.3% 4.1%; /* dark gray */
     --popover-foreground: 60 9.1% 97.8%; /* white */
-    --primary: 40, 39%, 65%; /* orange */
+    --primary: 51, 69%, 63%; /* orange */
     --primary-foreground: 60 9.1% 97.8%; /* white */
     --secondary: 12 6.5% 15.1%; /* very dark gray */
     --secondary-foreground: 60 9.1% 97.8%; /* white */
@@ -46,7 +46,7 @@
     --destructive-foreground: 60 9.1% 97.8%; /* white */
     --border: 12 6.5% 15.1%; /* very dark gray */
     --input: 12 6.5% 15.1%; /* very dark gray */
-    --ring: 40, 39%, 65%; /* orange */
+    --ring: 51, 69%, 63%; /* orange */
   }
 
   .theme-dracula-light {

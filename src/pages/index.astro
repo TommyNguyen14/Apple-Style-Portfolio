@@ -8,11 +8,8 @@ import ContactsCard from '../components/sections/ContactsCard.astro'
 import Now from '../components/sections/Now.astro'
 import CVCard from '../components/sections/CVCard.astro'
 import ExperienceCard from '../components/sections/ExperienceCard.astro'
-import MyStackCard from '../components/sections/MyStack.astro'
 import StudyCard from '../components/sections/StudyCard.astro'
 //
-import { ThemeCardToggle }  from '../components/ui/ThemeCardToggle.tsx';
-import { motion, AnimatePresence } from 'framer-motion'
 ---
 
 <script>
@@ -49,7 +46,6 @@ import { motion, AnimatePresence } from 'framer-motion'
   </div>
   <main
   class="relative m-auto grid w-full max-w-6xl gap-2 overflow-hidden p-2 sm:gap-2 sm:p-4 md:grid-cols-2 md:gap-3 md:p-6 lg:grid-cols-4 lg:gap-4"
-  style="max-height: 100vh;"
 >
     <IntroCard />
     <AboutMe />
@@ -62,13 +58,12 @@ import { motion, AnimatePresence } from 'framer-motion'
       title="Portfolio & Projects"
       href="/portfolio"
     />
-
     <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
       <p class="text-xs">
         © 2024 · Developed with using <a
           href="https://astro.build/"
           target="_blank"
-          class="text-zinc-600">Astro</a
+          class="text-amber-200">Astro</a
         > by Tommy Nguyen.
         <img src="jesse.gif" alt="Jesse GIF" class=" mx-auto" />
       </p>

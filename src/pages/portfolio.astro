@@ -1,51 +1,60 @@
 ---
-import { WORK } from '../lib/constants'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import TopLayout from '../layouts/TopLayout.astro'
 import BottomLayout from '../layouts/BottomLayout.astro'
 import ProjectCard from '../components/ProjectCard.astro'
 
-import { contentfulClient } from '../lib/contentful'
-import { documentToHtmlString } from '@contentful/rich-text-html-renderer'
-import type { EntryFieldTypes } from 'contentful'
-
 interface Project {
-  contentTypeId: 'Projects'
-  fields: {
-    name: EntryFieldTypes.Text
-    img: EntryFieldTypes.AssetLink
-    website: EntryFieldTypes.EntryResourceLink<any>
-    repositorio: EntryFieldTypes.EntryResourceLink<any>
-  }
+  name: string
+  img: string
+  repository: string
+  description: string
 }
 
-const entries = await contentfulClient.getEntries<Project>({})
+const projects: Project[] = [
+  {
+    name: "Pomotivity",
+    img: "../public/projects/pomotivity.png",
+    repository: "https://github.com/dangphung4/pomodoro-insiohacks2023",
+    description: "Developed a productivity app with a dynamic Pomodoro timer and task management. Added features to increase user engagement and 70+ themes. Integrated Material-UI for a modern interface and ensured cross-browser compatibility and responsiveness through extensive testing."
+  },
+  {
+    name: "One Piece Site",
+    img: "../public/projects/onepiecesite.png",
+    repository: "https://github.com/TommyNguyen14/One-Piece-Site",
+    description: "A basic website created using HTML, CSS, and JS. Contains multiple webpages displaying information regarding the Japanese manga series 'One Piece' written by Eiichiro Oda."
+  },
+  {
+    name: "Wifi Pineapple Pen-Testing",
+    img: "/path/to/project3-image.jpg",
+    repository: "https://github.com/project3",
+    description: "Work in progress project, finding vulnerabilities and wifi scanning."
+  }
+]
 ---
 
 <BaseLayout
   title="Portfolio"
-  description="Projects and some clone's that I did"
+  description="Projects & Certifications"
 >
   <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
     <TopLayout>
-      <h2
-        class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"
-      >
-        Projects and clone's
+      <h2 class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+        Projects & Certifications
       </h2>
     </TopLayout>
     <BottomLayout>
-      <div class="flex w-full flex-wrap justify-center gap-2">
+      <div class="grid grid-cols-2 sm:grid-cols-1 lg:grid-cols-2 gap-20">
         {
-          entries.items.map((entry: any) => (
+          projects.map((project: Project, index: number) => (
             <ProjectCard
-              key={entry?.sys?.id}
-              href={entry?.fields?.website}
-              heading={entry?.fields?.name}
-              subheading={entry?.fields?.description}
-              imagePath={entry?.fields?.img?.fields?.file.url}
-              altText={entry?.fields?.img?.fields.title}
-              class="w-full sm:w-2/5"
+              key={index}
+              href={project.repository}
+              heading={project.name}
+              subheading={project.description}
+              imagePath={project.img}
+              altText={`${project.name} Image`}
+              class="w-96 h-96"
             />
           ))
         }
